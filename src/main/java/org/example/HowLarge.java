@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class HowLarge {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String listEntry = "place holder";
+        String listEntry;
         ArrayList<String> list = new ArrayList<>();
-        while (!listEntry.equals("")){
+        while (true){
             listEntry = scanner.nextLine();
             if (listEntry.equals(""))
                 break;

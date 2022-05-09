@@ -7,9 +7,8 @@ public class IndexOfInteger {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> list = new ArrayList<>();
-        int listItem = 1;
-        while (!(listItem == 0)) {
-            listItem = Integer.parseInt(scanner.nextLine());
+        while (true) {
+           int listItem = Integer.parseInt(scanner.nextLine());
             if (listItem == 0)
                 break;
             else
@@ -17,7 +16,11 @@ public class IndexOfInteger {
         }
         System.out.println("Done entering integers into the list");
         System.out.println("What number are you looking for in the list?");
-        String desiredIndex = scanner.nextLine();
-        System.out.println(desiredIndex + "Is at index " + list.indexOf(Integer.valueOf(desiredIndex)));
+        int desiredIndex = Integer.parseInt(scanner.nextLine());
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == desiredIndex){
+                System.out.println(desiredIndex + " is at index " + i);
+        }
+        }
     }
 }
